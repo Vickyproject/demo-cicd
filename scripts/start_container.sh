@@ -1,8 +1,13 @@
 #!/bin/bash
-set -e
 
-# Pull the Docker image from Docker Hub
-docker pull docker pull lionpull123/simple-python-flask
+# Define the image you want to pull (replace with your image name and tag)
+IMAGE_NAME="simple-python-flask:latest"
 
-# Run the Docker image as a container
-docker run -d -p 5000:5000 docker pull lionpull123/simple-python-flask
+# Pull the Docker image
+docker pull $IMAGE_NAME
+
+# Define the container name
+CONTAINER_NAME="flask-app"
+
+# Run the Docker container with the specified name and port mapping
+docker run -d --name $CONTAINER_NAME -p 5000:5000 $IMAGE_NAME
