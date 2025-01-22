@@ -7,7 +7,7 @@ IMAGE_NAME="lionpull123/simple-python-flask:latest"
 docker pull $IMAGE_NAME
 
 # Define the container name
-CONTAINER_NAME="flask-app"
+CONTAINER_NAME="python-flask-app"
 
 # Run the Docker container with the specified name and port mapping
 docker run -d --name $CONTAINER_NAME -p 5000:5000 $IMAGE_NAME
